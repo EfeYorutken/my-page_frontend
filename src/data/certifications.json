@@ -1,0 +1,28 @@
+{
+  "title" : {
+    "tr" : "Sertifikalar",
+    "en" : "Certificates"
+  },
+  "data" : {
+    "tr" : [
+      { "name" : "Versiyon kontrolleri: Git ve Github", "instution" : "BTK", "date" : "03.05.2024", "image" : "certificates/git_tut_btk.png", "content" : [ "Git ile versiyon kontrolü", "Github ile git senkronizasyonu", "Github ile takım içi kod paylaşımı" ] },
+      { "name" : "Siber Güvenliğe Giriş", "instution" : "CISCO Network Academy", "date" : "16.04.2025", "image" : "certificates/introduction-to-cybersecurity.png", "content" : [ "Siber güvenlik temelleri", "kişisel veri güvenliği", "şirketlerin karşılaştığı güvenlik problemleri" ] },
+      { "name" : "mendix rapid dev", "instution" : "Mendix", "date" : "19.08.2024", "image" : "certificates/mendix_rapid_dev.png", "content" : [ "Mendix platformu ile fullstack uygulama geliştirme" ] },
+      { "name" : "PHP 8 ile Web Uygulama Geliştirme Sertifikası", "instution" : "BTK", "date" : "25.01.2025", "image" : "certificates/PHP_8_ile_Web_Uygulama_Geliştirme_Sertifika.png", "content" : [ "PHP8 sunucu kurulumu", "PHP dili temelleri", "PHP8 ile fullstack geliştirme" ] },
+      { "name" : "sat 2024 kis kampi", "instution" : "Siber Anadolu Toplulukları", "date" : "11.02.2024", "image" : "certificates/sat_2024_kis_kampi.png", "content" : [ "Temel uygulama güvenliği", "Injection saldırıları", "Web parameteresi manipulasyonu" ] },
+      { "name" : "Siber Tehdit İstihbaratı ve Tehdit Avcılığı Sertifikası", "instution" : "BTK", "date" : "20.04.2024", "image" : "certificates/Siber_Tehdit_İstihbaratı_ve_Tehdit_Avcılığı_Sertifika.png", "content" : [ "siber tehtidleri tespiti", "siber tehdit inclemesi", "siber tehdit analizi" ] },
+      { "name" : "Uygulamalı Sızma Testi Sertifika", "instution" : "BTK", "date" : "08.04.2024", "image" : "certificates/Uygulamalı_Sızma_Testi_Sertifika.png", "content" : [ "Labaratuvar ortamı kurulumu", "uygulama sızma teknikleri" ] },
+      { "name" : "Veri Bilimi için Python ve Tensorflow Sertifika", "instution" : "BTK", "date" : "14.02.2024", "image" : "certificates/Veri_Bilimi_için_Python_ve_Tensorflow_Sertifika.png", "content" : [ "Numpy ve Pandas ile veri analizi", "Numpy ve Pandas ile veri temizliği", "Mathplotlib ile veri görselleştirme", "Tensorflow ile makine öğrenmesi modeli eğitimi, değerlendirilmesi ve tahmin yapma işlemleri", "Regresyon sınıflandırma, veri analizi, erken durdurma ve dropout" ] }
+    ],
+    "en" : [
+      { "name" : "Version Control: Git and GitHub", "instution" : "BTK", "date" : "03.05.2024", "image" : "certificates/git_tut_btk.png", "content" : [ "Version control with Git", "Git synchronization with GitHub", "Team code sharing with GitHub" ] },
+      { "name" : "Introduction to Cyber Security", "instution" : "CISCO Network Academy", "date" : "16.04.2025", "image" : "certificates/introduction-to-cybersecurity.png", "content" : [ "Cyber security fundamentals", "Personal data security", "Security problems faced by companies" ] },
+      { "name" : "mendix rapid dev", "instution" : "Mendix", "date" : "19.08.2024", "image" : "certificates/mendix_rapid_dev.png", "content" : [ "Fullstack application development with the Mendix platform" ] },
+      { "name" : "PHP 8 Web Application Development Certificate", "instution" : "BTK", "date" : "25.01.2025", "image" : "certificates/PHP_8_ile_Web_Uygulama_Geliştirme_Sertifika.png", "content" : [ "PHP8 server setup", "PHP language fundamentals", "Fullstack development with PHP8" ] },
+      { "name" : "SAT 2024 Winter Camp", "instution" : "Siber Anadolu Toplulukları", "date" : "11.02.2024", "image" : "certificates/sat_2024_kis_kampi.png", "content" : [ "Basic application security", "Injection attacks", "Web parameter manipulation" ] },
+      { "name" : "Cyber Threat Intelligence and Threat Hunting Certificate", "instution" : "BTK", "date" : "20.04.2024", "image" : "certificates/Siber_Tehdit_İstihbaratı_ve_Tehdit_Avcılığı_Sertifika.png", "content" : [ "Detection of cyber threats", "Cyber threat examination", "Cyber threat analysis" ] },
+      { "name" : "Applied Penetration Testing Certificate", "instution" : "BTK", "date" : "08.04.2024", "image" : "certificates/Uygulamalı_Sızma_Testi_Sertifika.png", "content" : [ "Laboratory environment setup", "Application penetration testing techniques" ] },
+      { "name" : "Python and Tensorflow Certificate for Data Science", "instution" : "BTK", "date" : "14.02.2024", "image" : "certificates/Veri_Bilimi_için_Python_ve_Tensorflow_Sertifika.png", "content" : [ "Data analysis with Numpy and Pandas", "Data cleaning with Numpy and Pandas", "Data visualization with Matplotlib", "Training, evaluating, and making predictions with machine learning models using Tensorflow", "Regression classification, data analysis, early stopping, and dropout" ] }
+    ]
+  }
+}

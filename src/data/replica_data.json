@@ -1,0 +1,16 @@
+{
+
+  "tr" : {
+
+    "title" : "Sorunuz Mu Var?",
+    "submit_text" : "Sor"
+  },
+
+  "en" : {
+
+    "title" : "Still Got Questions?",
+    "submit_text" : "Ask"
+
+  }
+
+}

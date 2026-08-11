@@ -1,0 +1,419 @@
+{
+  "lang_independent_data" : {
+
+    "importants" : [
+      "Computer Engineering",
+      "Bilgisayar Mühendisliği",
+      "CyberTEDU",
+      "Secondary Field",
+      "Yan Dal",
+      "High Level",
+      "Yüksek seviye",
+      "Fullstack Developer"
+    ],
+
+    "languages" : [
+      { "name" : "TypeScript" , "relation" :[ "fs"  ], "detail" : []},
+      { "name" : "Rust" , "relation" :[ "fs", "system"  ], "detail" : []},
+      { "name" : "C++" , "relation" :[ "fs", "system"  ], "detail" : [
+        "C++20",
+        "Literally no libraries (for now)"
+      ]},
+      { "name" : "C" , "relation" :[ "fs", "system"  ], "detail" : []},
+      { "name" : "Go" , "relation" :[ "fs", "cyber"  ], "detail" : []},
+      { "name" : "JavaScript" , "relation" :[ "fs" ], "detail" : []},
+      { "name" : "Python" , "relation" :[ "fs","cyber"  ], "detail" : []},
+      { "name" : "PHP" , "relation" :[ "cyber"  ], "detail" : []},
+      { "name" : "SQL" , "relation" :[ "cyber", "fs"  ], "detail" : []},
+      { "name" : "Bash" , "relation" :[ "cyber", "system" ], "detail" : []}
+    ],
+
+    "tools" : [
+      { "name" : "Linux" , "relation" : [ "fs", "system", "cyber"  ], "detail" : []},
+      { "name" : "Docker" , "relation" : [ "fs", "system"  ], "detail" : []},
+      { "name" : "Git" , "relation" : [ "fs", "system", "cyber" ], "detail" : []},
+      { "name" : "NodeJs" , "relation" : [ "fs" ], "detail" : []},
+      { "name" : "expressJS" , "relation" : [ "fs"  ], "detail" : []},
+      { "name" : "ReactJS" , "relation" : [ "fs"  ], "detail" : []},
+      { "name" : "Flask" , "relation" : [ "fs"  ], "detail" : []},
+      { "name" : "Warp" , "relation" : [ "fs"  ], "detail" : []},
+      { "name" : "Diesel" , "relation" : [ "fs"  ], "detail" : []},
+      { "name" : "AWS" , "relation" : [ "fs" ], "detail" : []},
+      { "name" : "gobuster" , "relation" :[ "cyber"  ], "detail" : []},
+      { "name" : "nmap" , "relation" : [ "cyber"  ], "detail" : []},
+      { "name" : "sqlmap" , "relation" :[ "cyber"  ], "detail" : []},
+      { "name" : "Burpe Suite" , "relation" :[ "cyber"  ], "detail" : []},
+      { "name" : "ffuf" , "relation" :[ "cyber"  ], "detail" : []}
+    ]
+
+  },
+  "language_dependent_data" : {
+    "tr" : {
+
+      "section_titles" : {
+
+        "education" : "Eğitim",
+        "skills" : "Beceriler",
+        "languages" : "Diller",
+        "tools" : "Araçlar",
+        "other_skills" : "Öteki Beceriler",
+        "work_experinece" : "Çalışma Geçmişi",
+        "what_have_i_worked_on" : "Geçmiş Projelerim",
+        "what_am_i_working_on" : "Şu Anki Projelerim",
+        "what_will_i_work_on" : "Gelecek Projelerim"
+      },
+
+      "skills2names" : {
+        "fs" : "Fullstack",
+        "system" : "Sistem Programlama",
+        "cyber" : "Siber Güvenlik",
+        "all" : "Bütün Beceriler"
+      },
+
+      "what_will_i_work_on" : [
+
+        {
+        "title" : "Lokal iş başvurusu filtreleme uygulaması",
+        "techstack" : [ "ReactJS", "NodeJS", "ExpressJS","Typescript" ],
+        "description" : "LinkedIn'de bulunan iş başvurularını kullanıcı tercihlerine göre filtreleyen lokal bir web uygulaması.",
+        "link" : null
+        },
+
+        {
+        "title" : "JSON Parser",
+        "techstack" : [ "C++" ],
+        "description" : "JSON dosyası içerikleriyle C++20 objeleri oluşturmaya, kullanmaya ve kaydetmeye yarayan bir kütüphane.",
+        "link" : null
+        },
+
+        {
+        "title" : "Görme engelliler için bir terminal emülatörü",
+        "techstack" : [ "Rust (muhtemelen)" ],
+        "description" : "Standart çıktıları duyulabilir ve anlaşılabilir bir formda sunan bir terminal emülatörü.",
+        "link" : null
+        },
+
+        {
+        "title" : "GPU tabanlı veritabanı çözümü",
+        "techstack" : [ "Rust (muhtemelen)" ],
+        "description" : "Birbiriyle etkileşime geçmeyen sorguları entegre GPU üzerinden yürüten bir veritabanı çözümü.",
+        "link" : null
+        }
+
+      ],
+
+      "what_im_working_on" : [
+        {
+          "title" : "Bilfiil bu site",
+          "techstack" : [ "ReactJS", "Typescript" ],
+          "description" : "Portfolyo sitem",
+          "link" : null
+        }
+      ],
+
+      "projects" : [
+
+        {
+          "title" : "Game of Life Simülatörü",
+          "techstack" : [ "HTML", "Typescript" ],
+          "description" : "Kullanıcı tarafından belirlenen bir tahta durumu üzerinde Conway'in Game of Life kurallarını uygulayan interaktif bir web uygulaması.",
+          "link" : "https://github.com/EfeYorutken/GameOfLife"
+        },
+
+        {
+          "title" : "Ninja Runner",
+          "techstack" : [ "HTML", "Typescript" ],
+          "description" : "Engellerden kaçmak için yerçekiminin maipüle edildiği iki boyutle bir platformer oyunu.",
+          "link" : "https://github.com/EfeYorutken/Ninja-Runner"
+        },
+
+        {
+          "title" : "Prescription Maker",
+          "techstack" : [ "MySQL", "Typescript" ],
+          "description" : "Verilen semptomlara göre yan etkileri en aza ingirdeyecek şekilde bir reçete oluşturan bir sunucu tarafı uygulama.",
+          "link" : "https://github.com/EfeYorutken/db_proj"
+        },
+
+        {
+          "title" : "BF Interpretter",
+          "techstack" : [ "C" ],
+          "description" : "İnteraktif shell özelliği olan bir Brinfuck (esoterik bir programlama dili) yorumlayıcısı.",
+          "link" : "https://github.com/EfeYorutken/bf_interpreter"
+        },
+
+        {
+          "title" : "Markov Chain AI",
+          "techstack" : [ "Python" ],
+          "description" : "Sıradaki kelimeyi tahmin etmek için Markov Zincir'lerini kullanan bir yazı üretim aracı.",
+          "description" : "A text generation tool that utilzes Markov Chains for next-word prediction.",
+          "link" : "https://github.com/EfeYorutken/markov_chain_ai"
+        },
+
+        {
+          "title" : "Token Scanner",
+          "techstack" : [ "Go" ],
+          "description" : "Go'nun native concurrency modelini kullanarak, aralık, sabit değer ve kişisel scriptler ile belirtilmiş portları tarayan bir port tarayıcısı.",
+          "link" : "https://github.com/EfeYorutken/token_scanner"
+        },
+
+        {
+          "title" : "Shell",
+          "techstack" : [ "C" ],
+          "description" : "A shell for executing binary files and issuing system calls.",
+          "description" : "Binary dosyaları ve sistem çağrılarını çaliştırabilen bir shell.",
+          "link" : "https://github.com/EfeYorutken/shell"
+        },
+
+        {
+          "title" : "Sicot",
+          "techstack" : [ "Rust" ],
+          "description" : "Bir \"Basit Sıkıştırma Araci\" (SImple COmpression Tool). Huffman Coding metodunu kullanarak girdi dosyalarını sıkıştırılmış binary dosyalarına çevirir.",
+          "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
+          "link" : "https://github.com/EfeYorutken/sicot"
+        }
+
+      ],
+
+      "work_experience" : [
+
+        {
+          "inst" : "FTD Bilşim",
+          "role" : "Fullstack Developer",
+          "date" : [ "2024-08-01", "2024-09-01" ],
+          "details" : [
+            "Kullanılan araçlardan yola çıkarak, ideal koşullar altında 5 saniye ve altında rapor çıkarabilen bir açık tarayıcısı üretildi",
+            "\"Mendix Developer\" sertifikası alındı"
+          ]
+        },
+        {
+          "inst" : "Tegsoft",
+          "role" : "Fullstack Developer",
+          "date" : [ "2024.09.01", "2024.10.01" ],
+          "details" : [
+            "IVD sistemlerinin tasarımı ve üretimi öğrenildi",
+            "Binlerce kullanıcıya paralel olarak hizmet verebilen IVR tabanlı bir banka uygulaması geliştirildi"
+          ]
+        },
+        {
+          "inst" : "Huawei",
+          "role" : "Developer Advocate",
+          "date" : [ "2025.12.01", "2026.01.30" ],
+          "details" : [
+            "HarmonyOS uygulaması geliştrimek için ArkTS dili öğrenildi",
+            "İki adet kullanıma hazır uygulamanın geliştirilmesinde rol oynandı"
+          ]
+        }
+
+      ],
+
+      "education" : [
+        {
+          "inst" : "TED Üniversitesi (Eylül 2021 - Eylül 2025)",
+          "details" : [
+            "Bilgisayar Mühendisliği",
+            "İşletme Yan Dal",
+            "CyberTEDU",
+            "Siber Anadolu Toplulukları" 
+          ]
+        },
+        {
+          "inst" : "TED Ankara Koleji (Eylül 2013 - Haziran 2020)",
+          "details" : [
+            "IB Programı, Yüksek seviye Türkçe ve Fizik",
+            "Pi Günü",
+            "Fizik Kimya Biyoloji günleri" 
+          ]
+        }
+      ],
+      "other_skills" : [
+        { "name" : "İngilizce", "relation" :[ "cyber", "fs", "system" ], "detail" : []},
+        { "name" : "Almanca", "relation" :[ "cyber", "fs", "system" ], "detail" : []},
+        { "name" : "API Dizaynı", "relation" :[ "cyber", "fs", "system" ], "detail" : [
+          "REST", "Graphql", "gRPC"
+        ]}
+      ]
+    },
+    "eng" : {
+
+      "skills2names" : {
+        "fs" : "fullstack",
+        "system" : "systems programming",
+        "cyber" : "cyber security",
+        "all" : "All Skills"
+      },
+
+      "section_titles" : {
+
+        "education" : "Education",
+        "skills" : "Skills",
+        "languages" : "Languages",
+        "tools" : "Tools",
+        "other_skills" : "Other skills",
+        "work_experinece" : "Work Experinece",
+        "what_have_i_worked_on" : "What have i worked on",
+        "what_am_i_working_on" : "What Am I Working On",
+        "what_will_i_work_on" : "What Will I Work On"
+      },
+
+      "what_will_i_work_on" : [
+
+        {
+          "title" : "Local job filteration system based on skillset",
+          "techstack" : [ "ReactJS", "NodeJS", "ExpressJS","Typescript" ],
+          "description" : "A locally ran webapplication that scans LinkedIn job posts for the users skillset, interest, locations etc.",
+          "link" : null
+        },
+
+        {
+          "title" : "JSON Parser",
+          "techstack" : [ "C++" ],
+          "description" : "A library for creating, using and storing JSON file content as C++20 object.",
+          "link" : null
+        },
+
+        {
+          "title" : "Terminal emulator for visually impaired",
+          "techstack" : [ "Rust (probably)" ],
+          "description" : "A terminal emulator that displays standard outputs of all kinds in an audable manner.",
+          "link" : null
+        },
+
+        {
+          "title" : "GPU based database solution",
+          "techstack" : [ "Rust (probably)" ],
+          "description" : "A database solution that executes non-interracting queries in parallel using the integrated GPU.",
+          "link" : null
+        }
+
+      ],
+
+      "what_im_working_on" : [
+        {
+          "title" : "Literally This Site",
+          "techstack" : [ "ReactJS", "Typescript" ],
+          "description" : "My portfolio page",
+          "link" : null
+        }
+      ],
+
+      "projects" : [
+
+        {
+          "title" : "Game of Life Simulation",
+          "techstack" : [ "HTML", "Typescript" ],
+          "description" : "An interractive web application that applies the rules of Conway's game of life to a user defined board state.",
+          "link" : "https://github.com/EfeYorutken/GameOfLife"
+        },
+
+        {
+          "title" : "Ninja Runner",
+          "techstack" : [ "HTML", "Typescript" ],
+          "description" : "A 2D platformer where gravity is manipulated to avoid obsticles.",
+          "link" : "https://github.com/EfeYorutken/Ninja-Runner"
+        },
+
+        {
+          "title" : "Prescription Maker",
+          "techstack" : [ "MySQL", "Typescript" ],
+          "description" : "Backend of an application that produces a prescription given a list of symptoms that minimise the amount of side-effects experineced by the consumer.",
+          "link" : "https://github.com/EfeYorutken/db_proj"
+        },
+
+        {
+          "title" : "BF Interpretter",
+          "techstack" : [ "C" ],
+          "description" : "A brainfuck (an esoteric programming language) interpretter and interractive shell.",
+          "link" : "https://github.com/EfeYorutken/bf_interpreter"
+        },
+
+        {
+          "title" : "Markov Chain AI",
+          "techstack" : [ "Python" ],
+          "description" : "A text generation tool that utilzes Markov Chains for next-word prediction.",
+          "link" : "https://github.com/EfeYorutken/markov_chain_ai"
+        },
+
+        {
+          "title" : "Token Scanner",
+          "techstack" : [ "Go" ],
+          "description" : "A token port scanner which utilizes native concurrency model of Go, capable of scanning ports specified in a variaty of ways such as file list, range or custom script defined values",
+          "link" : "https://github.com/EfeYorutken/token_scanner"
+        },
+
+        {
+          "title" : "Shell",
+          "techstack" : [ "C" ],
+          "description" : "A shell for executing binary files and issuing system calls.",
+          "link" : "https://github.com/EfeYorutken/shell"
+        },
+
+        {
+          "title" : "Sicot",
+          "techstack" : [ "Rust" ],
+          "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
+          "link" : "https://github.com/EfeYorutken/sicot"
+        }
+
+      ],
+
+      "work_experience" : [
+
+        {
+          "inst" : "FTD Bilşim",
+          "role" : "Fullstack Developer",
+          "date" : [ "2024.08.01", "2024.09.01" ],
+          "details" : [
+            "Developed a vulnerability scanner that is capable of delivering tool-based vulnearaiblity reports in under 5 seconds in ideal conditions",
+            "Received the \"Mendix Developer Certificati\""
+          ]
+        },
+        {
+          "inst" : "Tegsoft",
+          "role" : "Fullstack Developer",
+          "date" : [ "2024.09.01", "2024.10.01" ],
+          "details" : [
+            "Learned about the development of IVR systems",
+            "Developed an IVR based banking application capable of surving thousands of users in parallel."
+          ]
+        },
+        {
+          "inst" : "Huawei",
+          "role" : "Developer Advocate",
+          "date" : [ "2025.12.01", "2026.01.30" ],
+          "details" : [
+            "Learned the the ArkTS language for mobile application development on HarmonyOS",
+            "Played a role in the development of 2 field ready mobile applications for HarmonyOS"
+          ]
+        }
+
+      ],
+
+      "other_skills" : [
+        { "name" : "English", "relation" :[ "cyber", "fs", "system" ], "detail" : []},
+        { "name" : "German", "relation" :[ "cyber", "fs", "system" ], "detail" : []},
+        { "name" : "Api Development", "relation" :[ "cyber", "fs", "system" ], "detail" : [
+          "REST", "Graphql", "gRPC"
+        ]}
+      ],
+      "education" : [
+        {
+          "inst" : "TED University (September 2021 - September 2025)",
+          "details" : [
+            "Computer Engineering",
+            "Business Administration Secondary Field",
+            "CyberTEDU",
+            "Siber Anadolu Toplulukları"
+          ]
+        },
+        {
+          "inst" : "TED Ankara College (September 2013 - June 2020)",
+          "details" : [
+            "IB Program, High Level Turkish and Physics",
+            "Pi Day",
+            "Physics-Chemistry-Biology Days"
+          ]
+        }
+      ]
+    }
+  }
+}

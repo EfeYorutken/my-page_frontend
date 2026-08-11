@@ -1,0 +1,57 @@
+{
+  "tr" : {
+
+    "title" : "Eğitim",
+
+    "data" : [
+
+        {
+          "inst" : "TED Üniversitesi (Eylül 2021 - Eylül 2025)",
+          "details" : [
+            "Bilgisayar Mühendisliği",
+            "İşletme Yan Dal",
+            "CyberTEDU",
+            "Siber Anadolu Toplulukları" 
+          ]
+        },
+        {
+          "inst" : "TED Ankara Koleji (Eylül 2012 - Haziran 2020)",
+          "details" : [
+            "IB Programı, Yüksek seviye Türkçe ve Fizik",
+            "Pi Günü",
+            "Fizik Kimya Biyoloji günleri" 
+          ]
+        }
+    ]
+
+
+
+  },
+  "en" : {
+
+    "title" : "Education",
+
+    "data" : [
+
+      {
+        "inst" : "TED University (September 2021 - September 2025)",
+        "details" : [
+          "Computer Engineering",
+          "Business Administration Secondary Field",
+          "CyberTEDU",
+          "Siber Anadolu Toplulukları"
+        ]
+      },
+      {
+        "inst" : "TED Ankara College (September 2012 - June 2020)",
+        "details" : [
+          "IB Program, High Level Turkish and Physics",
+          "Pi Day",
+          "Physics-Chemistry-Biology Days"
+        ]
+      }
+    ]
+
+
+  }
+}

@@ -1,0 +1,321 @@
+// ──► FIXED: No longer using 'sass:color' on browser-runtime CSS variables ◄──
+
+:root {
+  --background: #16161d;
+  --main-font: #e2e2e2;
+  --title-first: #F1982B;
+  --attention-font: #d1d161;
+
+  // ──► FIXED: Using color-mix for runtime transformations ◄──
+  --title-second: color-mix(in srgb, var(--title-first), black 15%);
+  --active-selection: var(--title-first);
+  --passive-selection: color-mix(in srgb, var(--active-selection) 30%, transparent);
+  --border: color-mix(in srgb, var(--background), white 10%);
+}
+
+[data-theme="light"] {
+
+  --background: #fbe9d0;
+  --main-font: #244855;
+  --title-first: #e64833;
+  --title-second: #90aead;
+  --attention-font: #874f41;
+
+  --active-selection: var(--title-second);
+  --passive-selection: black;
+  --border: var(--main-font);
+}
+
+// ──► FIXED: Map runtime properties cleanly back to your existing SCSS hooks ◄──
+$background: var(--background);
+$main-font: var(--main-font);
+$title-first: var(--title-first);
+$title-second: var(--title-second);
+$attention-font: var(--attention-font);
+$active-selection: var(--active-selection);
+$passive-selection: var(--passive-selection);
+$border: var(--border);
+
+* {
+  background-color: $background;
+  color: $main-font;
+  transition-duration: 0.4s;
+
+  h1 {
+    color: $title-first;
+  }
+
+  h2 * {
+    color: $title-second;
+  }
+}
+
+.top_menu {
+  button {
+    border: 1px solid $title-first;
+    color: $main-font;
+
+    &:hover {
+      background-color: $title-first;
+      color: $background;
+    }
+  }
+}
+
+.important-item { 
+  color: var(--attention-font); 
+}
+
+.borderable-component > * {
+  margin-top: 2%;
+  padding: 2%;
+  border: solid 1px $border;
+  border-radius: 5%;
+}
+
+.skill-column-wrapper {
+  align-items: top;
+
+  select {
+    width: 100%;
+    height: 25%;
+    text-align: center;
+    color: $title-second;
+
+    option {
+      color: red; // fine on chrome
+    }
+  }
+}
+
+.skill-column {
+  display: inline-block;
+  width: 33%;
+  vertical-align: top;
+}
+
+.project-wrapper {
+  $button-width: 10%;
+  $gap-from-button: 2%;
+  padding: 0;
+  position: relative;
+
+  button {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: $button-width;
+    border: none;
+    
+    &:active {
+      background-color: var(--active-selection);
+    }
+
+    &.prev_button { 
+      left: 0;
+      border-left: 1px solid var(--passive-selection);    
+      
+      &:hover {
+        border-left: var(--active-selection) solid 10px;
+      }
+    }
+
+    &.next_button { 
+      right: 0;
+      border-right: 1px solid var(--passive-selection);    
+      
+      &:hover {
+        border-right: var(--active-selection) solid 10px;
+      }
+    }
+  }
+
+  .slider-wrapper {
+    width: calc(100% - (#{$button-width} * 2) - (#{$gap-from-button} * 2));
+    margin-left: $button-width + $gap-from-button;
+    word-wrap: break-word;
+    text-align: left;
+  }
+
+  .section-header {
+    margin-left: $button-width + $gap-from-button;
+  }
+}
+
+.replica-wrapper {
+  $gap: 5%;
+  height: 50vh;
+  position: relative;
+  $comw: 20%;
+  $msgw: calc(100% - $comw - $gap - $gap);
+
+  .comic-me {
+    width: $comw;
+    height: 60%;
+    position: absolute;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .replica-content-wrapper {
+    position: absolute;
+    width: $msgw;
+    height: 50%;
+    left: calc($comw + $gap);
+
+    .messaging {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%; 
+      min-height: 0;
+
+      #answer {
+        width: 100%;
+        flex: 1; 
+        min-height: 0;
+        overflow: hidden;
+        border: 1px solid $border;
+        position: relative;
+
+        .response-section {
+          $buttonw: 5%;
+          position: relative;
+          width: 100%;
+          height: 100%;
+
+          .slider-wrapper {
+            position: absolute;
+            top: 0;
+            width: calc(100% - $buttonw - $buttonw);
+            left: $buttonw;
+            height: 90%;
+            align-items: center;
+            border-top: 2px solid var(--active-selection);    
+
+            .keen-slider {
+              top: 0;
+              height: 100%;
+              overflow: hidden;
+
+              .keen-slider__slide {
+                margin: 0;
+                overflow: hidden;
+                overflow-wrap: break-word;
+                word-break: break-word;
+              }
+            }
+
+            .fit-probe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              visibility: hidden;
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+              overflow-wrap: break-word;
+              word-break: break-word;
+            }
+          }
+
+          .prev_button {
+            border: none;
+            border-left: 1px solid var(--passive-selection);    
+            position: absolute;
+            width: $buttonw;
+            height: 100%;
+            top: 0;
+            left: 0;
+
+            &:hover {
+              border-left: 1px solid var(--active-selection);    
+            }
+          }
+
+          .next_button {
+            border: none;
+            border-right: 1px solid var(--passive-selection);    
+            position: absolute;
+            width: $buttonw;
+            height: 100%;
+            top: 0;
+            right: 0;
+
+            &:hover {
+              border-right: var(--active-selection) solid 1px;
+            }
+          }
+        }
+      }
+
+      textarea {
+        width: 99%;
+        height: 40px; 
+        min-height: 40px; 
+        resize: none; 
+        border: 1px solid $border;
+
+        &:focus {
+          outline: none;
+          border: solid 1px var(--active-selection);
+        }
+      }
+
+      button {
+        border: none;
+        border-bottom: var(--passive-selection) 1px solid;
+
+        &:hover {
+          border-bottom: var(--active-selection) solid 1px;
+        }
+
+        &:active {
+          border: solid 1px var(--active-selection);
+        }
+      }
+    }
+  }
+}
+
+.work-experience-wrapper {}
+.work-experience {}
+.slider-wrapper {}
+
+.certificate {
+  display: flex;
+  flex-direction: column;
+  height: 35vh;
+  padding: 2%;
+
+  .certificate-body {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: 80%;
+  }
+
+  .certificate-info {
+    flex: 1;
+  }
+
+  .image-section {
+    width: 57%;
+    max-width: 57%;
+    height: 142.5%;
+    margin-top: -2%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}

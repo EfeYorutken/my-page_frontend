@@ -1,0 +1,22 @@
+{
+  "title" : {
+    "en" : "Languages",
+    "tr" : "Diller"
+  },
+
+  "data" : [
+    { "name" : "TypeScript" , "relation" :[ "fs"  ], "detail" : []},
+    { "name" : "Rust" , "relation" :[ "fs", "system"  ], "detail" : []},
+    { "name" : "C++" , "relation" :[ "fs", "system"  ], "detail" : [
+      "C++20"
+    ]},
+    { "name" : "C" , "relation" :[ "fs", "system"  ], "detail" : []},
+    { "name" : "Go" , "relation" :[ "fs", "cyber"  ], "detail" : []},
+    { "name" : "JavaScript" , "relation" :[ "fs" ], "detail" : []},
+    { "name" : "Python" , "relation" :[ "fs","cyber"  ], "detail" : []},
+    { "name" : "PHP" , "relation" :[ "cyber"  ], "detail" : []},
+    { "name" : "SQL" , "relation" :[ "cyber", "fs"  ], "detail" : []},
+    { "name" : "Bash" , "relation" :[ "cyber", "system" ], "detail" : []}
+  ]
+
+}

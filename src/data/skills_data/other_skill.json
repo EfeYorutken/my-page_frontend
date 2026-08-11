@@ -1,0 +1,24 @@
+{
+  "tr" : {
+    "title" :  "Öteki Beceriler",
+    "data" : [
+      { "name" : "İngilizce", "relation" :[ "cyber", "fs", "system" ], "detail" : ["Profesyonel seviye"]},
+      { "name" : "Almanca", "relation" :[ "cyber", "fs", "system" ], "detail" : ["Başlangıç seviye"]},
+      { "name" : "API Dizaynı", "relation" :[ "cyber", "fs", "system" ], "detail" : [
+        "REST", "Graphql", "gRPC"
+      ]}
+    ]
+  },
+
+  "en" : {
+    "title" :  "Other Skills",
+    "data" : [
+        { "name" : "English", "relation" :[ "cyber", "fs", "system" ], "detail" : ["Professional level"]},
+        { "name" : "German", "relation" :[ "cyber", "fs", "system" ], "detail" : ["Beginner level"]},
+        { "name" : "Api Development", "relation" :[ "cyber", "fs", "system" ], "detail" : [
+          "REST", "Graphql", "gRPC"
+        ]}
+    ]
+  }
+
+}

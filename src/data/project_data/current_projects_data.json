@@ -1,0 +1,26 @@
+{
+
+  "tr" : {
+    "title" : "Şu Anki Projelerim",
+    "data" : [
+      {
+        "title" : "Bilfiil bu site",
+        "techstack" : [ "ReactJS", "Typescript" ],
+        "description" : "Portfolyo sitem",
+        "link" : null
+      }
+    ]
+  },
+  "en" : {
+    "title" : "What Am I Working On",
+    "data" : [
+      {
+        "title" : "Literally This Site",
+        "techstack" : [ "ReactJS", "Typescript" ],
+        "description" : "My portfolio page",
+        "link" : null
+      }
+    ]
+  }
+
+}

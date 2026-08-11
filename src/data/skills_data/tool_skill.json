@@ -1,0 +1,23 @@
+{
+  "title" : {
+    "tr" : "Araçlar",
+    "en" : "Tools"
+  },
+  "data" : [
+    { "name" : "Linux" , "relation" : [ "fs", "system", "cyber"  ], "detail" : []},
+    { "name" : "Docker" , "relation" : [ "fs", "system"  ], "detail" : []},
+    { "name" : "Git" , "relation" : [ "fs", "system", "cyber" ], "detail" : []},
+    { "name" : "NodeJs" , "relation" : [ "fs" ], "detail" : []},
+    { "name" : "expressJS" , "relation" : [ "fs"  ], "detail" : []},
+    { "name" : "ReactJS" , "relation" : [ "fs"  ], "detail" : []},
+    { "name" : "Flask" , "relation" : [ "fs"  ], "detail" : []},
+    { "name" : "Warp" , "relation" : [ "fs"  ], "detail" : []},
+    { "name" : "Diesel" , "relation" : [ "fs"  ], "detail" : []},
+    { "name" : "AWS" , "relation" : [ "fs" ], "detail" : []},
+    { "name" : "gobuster" , "relation" :[ "cyber"  ], "detail" : []},
+    { "name" : "nmap" , "relation" : [ "cyber"  ], "detail" : []},
+    { "name" : "sqlmap" , "relation" :[ "cyber"  ], "detail" : []},
+    { "name" : "Burpe Suite" , "relation" :[ "cyber"  ], "detail" : []},
+    { "name" : "ffuf" , "relation" :[ "cyber"  ], "detail" : []}
+  ]
+}

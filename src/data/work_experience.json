@@ -1,0 +1,77 @@
+{
+
+  "tr" : {
+
+    "title" : "Çalışma Geçmişi",
+    "data" : [
+
+      {
+        "inst" : "FTD Bilşim",
+        "role" : "Fullstack Developer",
+        "date" : [ "2024-08-01", "2024-09-01" ],
+        "details" : [
+          "Kullanılan araçlardan yola çıkarak, ideal koşullar altında 5 saniye ve altında rapor çıkarabilen bir açık tarayıcısı üretildi",
+          "\"Mendix Developer\" sertifikası alındı"
+        ]
+      },
+      {
+        "inst" : "Tegsoft",
+        "role" : "Fullstack Developer",
+        "date" : [ "2024.09.01", "2024.10.01" ],
+        "details" : [
+          "IVD sistemlerinin tasarımı ve üretimi öğrenildi",
+          "Binlerce kullanıcıya paralel olarak hizmet verebilen IVR tabanlı bir banka uygulaması geliştirildi"
+        ]
+      },
+      {
+        "inst" : "Huawei",
+        "role" : "Developer Advocate",
+        "date" : [ "2025.12.01", "2026.01.30" ],
+        "details" : [
+          "HarmonyOS uygulaması geliştrimek için ArkTS dili öğrenildi",
+          "İki adet kullanıma hazır uygulamanın geliştirilmesinde rol oynandı"
+        ]
+      }
+
+    ]
+
+  },
+
+  "en" : {
+
+    "title" : "Work Experience",
+    "data" : [
+
+      {
+        "inst" : "FTD Bilşim",
+        "role" : "Fullstack Developer",
+        "date" : [ "2024.08.01", "2024.09.01" ],
+        "details" : [
+          "Developed a vulnerability scanner that is capable of delivering tool-based vulnearaiblity reports in under 5 seconds in ideal conditions",
+          "Received the \"Mendix Developer Certificati\""
+        ]
+      },
+      {
+        "inst" : "Tegsoft",
+        "role" : "Fullstack Developer",
+        "date" : [ "2024.09.01", "2024.10.01" ],
+        "details" : [
+          "Learned about the development of IVR systems",
+          "Developed an IVR based banking application capable of surving thousands of users in parallel."
+        ]
+      },
+      {
+        "inst" : "Huawei",
+        "role" : "Developer Advocate",
+        "date" : [ "2025.12.01", "2026.01.30" ],
+        "details" : [
+          "Learned the the ArkTS language for mobile application development on HarmonyOS",
+          "Played a role in the development of 2 field ready mobile applications for HarmonyOS"
+        ]
+      }
+
+    ]
+
+  }
+
+}

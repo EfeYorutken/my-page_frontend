@@ -1,0 +1,131 @@
+{
+
+  "tr": {
+    "title" : "Geçmiş Projelerim",
+    "data" : [
+
+        {
+          "title" : "Game of Life Simülatörü",
+          "techstack" : [ "HTML", "Typescript" ],
+          "description" : "Kullanıcı tarafından belirlenen bir tahta durumu üzerinde Conway'in Game of Life kurallarını uygulayan interaktif bir web uygulaması.",
+          "link" : "https://github.com/EfeYorutken/GameOfLife"
+        },
+
+        {
+          "title" : "Ninja Runner",
+          "techstack" : [ "HTML", "Typescript" ],
+          "description" : "Engellerden kaçmak için yerçekiminin maipüle edildiği iki boyutle bir platformer oyunu.",
+          "link" : "https://github.com/EfeYorutken/Ninja-Runner"
+        },
+
+        {
+          "title" : "Prescription Maker",
+          "techstack" : [ "MySQL", "Typescript" ],
+          "description" : "Verilen semptomlara göre yan etkileri en aza ingirdeyecek şekilde bir reçete oluşturan bir sunucu tarafı uygulama.",
+          "link" : "https://github.com/EfeYorutken/db_proj"
+        },
+
+        {
+          "title" : "BF Interpretter",
+          "techstack" : [ "C" ],
+          "description" : "İnteraktif shell özelliği olan bir Brinfuck (esoterik bir programlama dili) yorumlayıcısı.",
+          "link" : "https://github.com/EfeYorutken/bf_interpreter"
+        },
+
+        {
+          "title" : "Markov Chain AI",
+          "techstack" : [ "Python" ],
+          "description" : "Sıradaki kelimeyi tahmin etmek için Markov Zincir'lerini kullanan bir yazı üretim aracı.",
+          "description" : "A text generation tool that utilzes Markov Chains for next-word prediction.",
+          "link" : "https://github.com/EfeYorutken/markov_chain_ai"
+        },
+
+        {
+          "title" : "Token Scanner",
+          "techstack" : [ "Go" ],
+          "description" : "Go'nun native concurrency modelini kullanarak, aralık, sabit değer ve kişisel scriptler ile belirtilmiş portları tarayan bir port tarayıcısı.",
+          "link" : "https://github.com/EfeYorutken/token_scanner"
+        },
+
+        {
+          "title" : "Shell",
+          "techstack" : [ "C" ],
+          "description" : "A shell for executing binary files and issuing system calls.",
+          "description" : "Binary dosyaları ve sistem çağrılarını çaliştırabilen bir shell.",
+          "link" : "https://github.com/EfeYorutken/shell"
+        },
+
+        {
+          "title" : "Sicot",
+          "techstack" : [ "Rust" ],
+          "description" : "Bir \"Basit Sıkıştırma Araci\" (SImple COmpression Tool). Huffman Coding metodunu kullanarak girdi dosyalarını sıkıştırılmış binary dosyalarına çevirir.",
+          "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
+          "link" : "https://github.com/EfeYorutken/sicot"
+        }
+
+    ]
+  },
+  "en": {
+    "title" : "What Have I Worked On",
+    "data" : [
+
+      {
+        "title" : "Game of Life Simulation",
+        "techstack" : [ "HTML", "Typescript" ],
+        "description" : "An interractive web application that applies the rules of Conway's game of life to a user defined board state.",
+        "link" : "https://github.com/EfeYorutken/GameOfLife"
+      },
+
+      {
+        "title" : "Ninja Runner",
+        "techstack" : [ "HTML", "Typescript" ],
+        "description" : "A 2D platformer where gravity is manipulated to avoid obsticles.",
+        "link" : "https://github.com/EfeYorutken/Ninja-Runner"
+      },
+
+      {
+        "title" : "Prescription Maker",
+        "techstack" : [ "MySQL", "Typescript" ],
+        "description" : "Backend of an application that produces a prescription given a list of symptoms that minimise the amount of side-effects experineced by the consumer.",
+        "link" : "https://github.com/EfeYorutken/db_proj"
+      },
+
+      {
+        "title" : "BF Interpretter",
+        "techstack" : [ "C" ],
+        "description" : "A brainfuck (an esoteric programming language) interpretter and interractive shell.",
+        "link" : "https://github.com/EfeYorutken/bf_interpreter"
+      },
+
+      {
+        "title" : "Markov Chain AI",
+        "techstack" : [ "Python" ],
+        "description" : "A text generation tool that utilzes Markov Chains for next-word prediction.",
+        "link" : "https://github.com/EfeYorutken/markov_chain_ai"
+      },
+
+      {
+        "title" : "Token Scanner",
+        "techstack" : [ "Go" ],
+        "description" : "A token port scanner which utilizes native concurrency model of Go, capable of scanning ports specified in a variaty of ways such as file list, range or custom script defined values",
+        "link" : "https://github.com/EfeYorutken/token_scanner"
+      },
+
+      {
+        "title" : "Shell",
+        "techstack" : [ "C" ],
+        "description" : "A shell for executing binary files and issuing system calls.",
+        "link" : "https://github.com/EfeYorutken/shell"
+      },
+
+      {
+        "title" : "Sicot",
+        "techstack" : [ "Rust" ],
+        "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
+        "link" : "https://github.com/EfeYorutken/sicot"
+      }
+
+    ]
+  }
+
+}
