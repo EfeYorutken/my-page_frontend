@@ -119,10 +119,11 @@ html, body, #root {
     opacity: 1;
     pointer-events: auto;
     z-index: 1;
+    overflow: visible;
   }
 
   &.ghost {
-    opacity: 0.12;
+    opacity: 0.5;
   }
 }
 

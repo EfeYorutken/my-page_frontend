@@ -87,10 +87,10 @@ function MyBoringPage(){
     <MyReplica lang={current_lang} importants={importants} />,
   ];
 
-  const n = sections.length;
+  const section_count = sections.length;
 
   const step = (dir : number) => {
-    mutActive(prev => Math.min(n - 1, Math.max(0, prev + dir)));
+    mutActive(prev => Math.min(section_count - 1, Math.max(0, prev + dir)));
   };
 
   const onWheel = (e : React.WheelEvent) => {
@@ -150,8 +150,8 @@ function MyBoringPage(){
     { active < 2 ? <div className="wheel-segment ghost" style={{ top: "0", height: "12vh" }} /> : null }
     { active === 0 ? <div className="wheel-segment ghost" style={{ top: "12vh", height: "12vh" }} /> : null }
 
-    { active >= n - 1 ? <div className="wheel-segment ghost" style={{ top: "76vh", height: "12vh" }} /> : null }
-    { active >= n - 2 ? <div className="wheel-segment ghost" style={{ top: "88vh", height: "12vh" }} /> : null }
+    { active >= section_count - 1 ? <div className="wheel-segment ghost" style={{ top: "76vh", height: "12vh" }} /> : null }
+    { active >= section_count - 2 ? <div className="wheel-segment ghost" style={{ top: "88vh", height: "12vh" }} /> : null }
 
     </div>
   );
