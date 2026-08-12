@@ -3,13 +3,15 @@
   "tr" : {
 
     "title" : "Sorunuz Mu Var?",
-    "submit_text" : "Sor"
+    "submit_text" : "Sor",
+    "textarea_text" : "Burdan sorabilirsiniz"
   },
 
   "en" : {
 
     "title" : "Still Got Questions?",
-    "submit_text" : "Ask"
+    "submit_text" : "Ask",
+    "textarea_text" : "Ask Here"
 
   }
 

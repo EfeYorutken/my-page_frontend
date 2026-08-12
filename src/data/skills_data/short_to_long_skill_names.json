@@ -1,6 +1,14 @@
 {
-  "fs" : "Fullstack",
-  "system" : "Sistem Programlama",
-  "cyber" : "Siber Güvenlik",
-  "all" : "Bütün Beceriler"
+  "tr" : {
+    "fs" : "Fullstack",
+    "system" : "Sistem Programlama",
+    "cyber" : "Siber Güvenlik",
+    "all" : "Bütün Beceriler"
+  },
+  "en" : {
+    "fs" : "Fullstack",
+    "system" : "System Programming",
+    "cyber" : "Cyber Security",
+    "all" : "All Skills"
+  }
 }

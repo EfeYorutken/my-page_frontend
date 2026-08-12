@@ -23,7 +23,7 @@ type AnswerChunk = {
 
 const MyReplica = ( param : {lang : LanguageOptions, importants : string[]} )=>{
 
-  let [ai_answer, mut_ai_answer] = useState([ {content : "Ask Away" , emotion : emotions.neutral } ]);
+  let [ai_answer, mut_ai_answer] = useState<AnswerChunk[]>([]);
   const [display_answer, mut_display_answer] = useState(ai_answer);
   let [ comic_location, mut_comic_location ] = useState(emotions.neutral);
 
@@ -227,6 +227,11 @@ const MyReplica = ( param : {lang : LanguageOptions, importants : string[]} )=>{
   let submit_text = param.lang == "tr" ? replica_data.tr.submit_text :
     replica_data.en.submit_text;
 
+  let textarea_text = param.lang == "tr" ? replica_data.tr.textarea_text :
+    replica_data.en.textarea_text;
+
+  let textarea_placeholder = textarea_text + " ✎";
+
   return (
     <div className="replica-wrapper">
 
@@ -277,7 +282,7 @@ const MyReplica = ( param : {lang : LanguageOptions, importants : string[]} )=>{
 
     </div>
 
-    <textarea id="textarea" /> <button onClick={ask}>{submit_text}</button>
+    <textarea id="textarea" placeholder={textarea_placeholder} /> <button onClick={ask}>{submit_text}</button>
 
     </div>
 

@@ -5,7 +5,7 @@ import skills2names from "../../data/skills_data/short_to_long_skill_names.json"
 
 import type { SkillType, Language, Tool, OtherSkill, LanguageOptions } from "../../types"; 
 import filter_skills from "./skillsUtils";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import SkillColumn from "./skill_column_component";
 import SectionHeader from "./section_heading";
 
@@ -13,7 +13,9 @@ import SectionHeader from "./section_heading";
 
 function Skills( param : {lang : LanguageOptions, importants : string[]} ){
 
-  const skillmap = skills2names as Record<string, string>;
+  const skillmap : Record<string, string> = param.lang == "tr" ?
+    skills2names.tr :
+    skills2names.en;
 
   let other_skill_title = param.lang == "tr" ?
     other_skill.tr.title :
@@ -41,6 +43,10 @@ function Skills( param : {lang : LanguageOptions, importants : string[]} ){
   let [ selected_language,  mut_language  ] = useState(filter_skills(langs, selected_skill_set));
   let [ selected_tools,     mut_tools     ] = useState(filter_skills(tools, selected_skill_set));
 
+  let [ fading, mut_fading ] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<number | undefined>(undefined);
+
   const selected_other_skills = filter_skills(other_skills, selected_skill_set);
 
   const skills_title : string = param.lang == "tr" ?
@@ -51,9 +57,34 @@ function Skills( param : {lang : LanguageOptions, importants : string[]} ){
 
       const new_ss : SkillType = new_ss_e.target.value as SkillType;
 
-      mut_skill_set(new_ss);
-      mut_language(filter_skills(langs, new_ss));
-      mut_tools(filter_skills(tools, new_ss));
+      if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
+
+      const content = contentRef.current;
+      const oldHeight = content ? content.offsetHeight : 0;
+
+      mut_fading(true);
+
+      timeoutRef.current = window.setTimeout(() => {
+
+        mut_skill_set(new_ss);
+        mut_language(filter_skills(langs, new_ss));
+        mut_tools(filter_skills(tools, new_ss));
+
+        requestAnimationFrame(() => {
+          const el = contentRef.current;
+          if (el) {
+            const newHeight = el.scrollHeight;
+            if (newHeight !== oldHeight) {
+              el.animate(
+                [{ height: `${oldHeight}px` }, { height: `${newHeight}px` }],
+                { duration: 300, easing: "ease" }
+              );
+            }
+          }
+          mut_fading(false);
+        });
+
+      }, 250);
 
     }
 
@@ -63,6 +94,7 @@ function Skills( param : {lang : LanguageOptions, importants : string[]} ){
 
     <SectionHeader title={skills_title}/>
 
+    <div className="skill-select-wrapper">
     <select onChange={select_on_change}>
 
     {
@@ -77,8 +109,11 @@ function Skills( param : {lang : LanguageOptions, importants : string[]} ){
     }
 
     </select>
+    </div>
 
     <br />
+
+    <div ref={contentRef} className={"skills-content" + (fading ? " fading" : "")}>
 
     <SkillColumn title={language_skills_title} list={selected_language} important_parts={[
       "C++20",
@@ -92,6 +127,8 @@ function Skills( param : {lang : LanguageOptions, importants : string[]} ){
     ]}
     />
     <SkillColumn title={other_skill_title} list={selected_other_skills} />
+
+    </div>
 
     </div>
 
