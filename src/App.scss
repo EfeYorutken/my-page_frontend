@@ -35,6 +35,9 @@ $attention-font: var(--attention-font);
 $active-selection: var(--active-selection);
 $passive-selection: var(--passive-selection);
 $border: var(--border);
+$button-width: 10%;
+$gap-from-button: 2%;
+$slider-button-height: 90%;
 
 * {
   background-color: $background;
@@ -60,9 +63,10 @@ html, body, #root {
   top: 0;
   right: 0;
   z-index: 30;
-  padding: 1%;
+  padding: 0.5%;
   display: flex;
   gap: 0.5em;
+  font-size: 0.7em;
 
   .switch {
     position: relative;
@@ -75,6 +79,7 @@ html, body, #root {
     .switch-option {
       display: inline-block;
       width: 2.2em;
+      line-height: 1.2;
       text-align: center;
     }
 
@@ -107,6 +112,7 @@ html, body, #root {
   right: 2%;
   box-sizing: border-box;
   border: 1px solid $border;
+  border-bottom-width: 1.5px;
   border-radius: 5%;
   overflow: hidden;
   opacity: 0.4;
@@ -115,15 +121,24 @@ html, body, #root {
               height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
               opacity 0.3s ease;
 
+  > * {
+    visibility: hidden;
+    transition: visibility 0.3s ease;
+  }
+
+  .section-header {
+    visibility: visible;
+  }
+
   &.active {
     opacity: 1;
     pointer-events: auto;
     z-index: 1;
     overflow: visible;
-  }
 
-  &.ghost {
-    opacity: 0.5;
+    > * {
+      visibility: visible;
+    }
   }
 }
 
@@ -187,15 +202,16 @@ html, body, #root {
 }
 
 .project-wrapper {
-  $button-width: 10%;
-  $gap-from-button: 2%;
   padding: 0;
   position: relative;
 
   button {
     position: absolute;
-    top: 0;
-    height: 100%;
+    top: calc((100% - $slider-button-height) / 2);
+    bottom: calc((100% - $slider-button-height) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: $button-width;
     border: none;
     
@@ -228,38 +244,38 @@ html, body, #root {
     word-wrap: break-word;
     text-align: left;
   }
+}
 
-  .section-header {
-    margin-left: $button-width + $gap-from-button;
-  }
+.section-header {
+  margin-left: $button-width + $gap-from-button;
 }
 
 .replica-wrapper {
-  $gap: 5%;
-  height: 50vh;
   position: relative;
-  $comw: 20%;
-  $msgw: calc(100% - $comw - $gap - $gap);
 
-  .comic-me {
-    width: $comw;
-    height: 60%;
-    position: absolute;
+  .replica-body {
+    display: flex;
+    align-items: flex-start;
+    gap: 10%;
+    $comw: 20%;
+    $msgw: calc(100% - $comw - 10%);
 
-    img {
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+    .comic-me {
+      width: $comw;
+      height: 30vh;
+
+      img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
-  }
 
-  .replica-content-wrapper {
-    position: absolute;
-    width: $msgw;
-    height: 60%;
-    left: calc($comw + $gap);
+    .replica-content-wrapper {
+      width: $msgw;
+      height: 30vh;
 
-    .messaging {
+      .messaging {
       position: relative;
       display: flex;
       flex-direction: column;
@@ -282,7 +298,7 @@ html, body, #root {
 
           .slider-wrapper {
             position: absolute;
-            top: 0;
+            top: 5%;
             width: calc(100% - $buttonw - $buttonw);
             left: $buttonw;
             height: 90%;
@@ -320,8 +336,8 @@ html, body, #root {
             border-left: 1px solid var(--passive-selection);    
             position: absolute;
             width: $buttonw;
-            height: 100%;
-            top: 0;
+            height: $slider-button-height;
+            top: 5%;
             left: 0;
 
             &:hover {
@@ -334,8 +350,8 @@ html, body, #root {
             border-right: 1px solid var(--passive-selection);    
             position: absolute;
             width: $buttonw;
-            height: 100%;
-            top: 0;
+            height: $slider-button-height;
+            top: 5%;
             right: 0;
 
             &:hover {
@@ -378,6 +394,7 @@ html, body, #root {
     }
   }
 }
+}
 
 .work-experience-wrapper {}
 .work-experience {}
@@ -386,27 +403,30 @@ html, body, #root {
 .certificate {
   display: flex;
   flex-direction: column;
-  height: 35vh;
+  box-sizing: border-box;
   padding: 2%;
+  position: relative;
 
   .certificate-body {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    height: 80%;
   }
 
   .certificate-info {
     flex: 1;
+    max-width: 41%;
   }
 
   .image-section {
     width: 57%;
     max-width: 57%;
-    height: 142.5%;
-    margin-top: -2%;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    bottom: 2%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 

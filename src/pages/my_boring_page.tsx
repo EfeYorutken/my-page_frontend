@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useRef } from "react";
 import type { LanguageOptions } from "../types";
 
 import Education_BoringPage from "./boring_page_components/education";
@@ -10,12 +10,12 @@ import WhatIAmWorkingOn from "./boring_page_components/what_am_i_working_on";
 import WhatIWillWorkingOn from "./boring_page_components/what_will_i_work_on";
 import MyReplica from "./boring_page_components/my_replica";
 
-const rowTop = (d : number) : string => {
-  if (d > 2) return `${88 + (d - 2) * 12}vh`;
-  if (d < -2) return `${(d + 2) * 12}vh`;
-  const tops = [0, 12, 24, 76, 88];
-  return `${tops[d + 2]}vh`;
+const rowTop = (d : number, activeH : number) : string => {
+  if (d <= 0) return `${(d + 2) * 12}vh`;
+  return `calc(24vh + ${activeH}px + 2px + ${(d - 1) * 12}vh)`;
 };
+
+const DEFAULT_ACTIVE_H = () => window.innerHeight * 0.52;
 
 type SwitchParam = {
   left: React.ReactNode;
@@ -58,6 +58,55 @@ function MyBoringPage(){
   const cooldownRef = useRef(0);
   const touchStartY = useRef(0);
 
+  const [heights, mutHeights] = useState<number[]>([]);
+  const measureRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  const sections = [
+    <Education_BoringPage lang={current_lang} importants={importants} />,
+    <Skills lang={current_lang} importants={importants} />,
+    <Projects lang={current_lang} importants={importants} />,
+    <WhatIAmWorkingOn lang={current_lang} importants={importants} />,
+    <WhatIWillWorkingOn lang={current_lang} importants={importants} />,
+    <WorkExperienceComponent lang={current_lang} importants={importants} />,
+    <Certificates lang={current_lang} importants={importants} targetHeight={heights[5]} />,
+    <MyReplica lang={current_lang} importants={importants} />,
+  ];
+
+  const section_count = sections.length;
+
+  useLayoutEffect(() => {
+    mutHeights(prev => {
+      const next = [...prev];
+      measureRefs.current.forEach((el, i) => {
+        if (el) next[i] = el.offsetHeight;
+      });
+      return next;
+    });
+  }, []);
+
+  useEffect(() => {
+    const observers: ResizeObserver[] = [];
+
+    measureRefs.current.forEach((el, i) => {
+      if (!el) return;
+
+      const observer = new ResizeObserver(() => {
+        mutHeights(prev => {
+          const h = el.offsetHeight;
+          if (prev[i] === h) return prev;
+          const next = [...prev];
+          next[i] = h;
+          return next;
+        });
+      });
+
+      observer.observe(el);
+      observers.push(observer);
+    });
+
+    return () => observers.forEach(o => o.disconnect());
+  }, []);
+
   useEffect(() => {
     if (isLight) {
       document.documentElement.setAttribute('data-theme', 'light');
@@ -75,19 +124,6 @@ function MyBoringPage(){
     change_lang2(lang2);
     localStorage.setItem("lang", lang2);
   }
-
-  const sections = [
-    <Education_BoringPage lang={current_lang} importants={importants} />,
-    <Skills lang={current_lang} importants={importants} />,
-    <Projects lang={current_lang} importants={importants} />,
-    <WhatIAmWorkingOn lang={current_lang} importants={importants} />,
-    <WhatIWillWorkingOn lang={current_lang} importants={importants} />,
-    <WorkExperienceComponent lang={current_lang} importants={importants} />,
-    <Certificates lang={current_lang} importants={importants} />,
-    <MyReplica lang={current_lang} importants={importants} />,
-  ];
-
-  const section_count = sections.length;
 
   const step = (dir : number) => {
     mutActive(prev => Math.min(section_count - 1, Math.max(0, prev + dir)));
@@ -138,20 +174,15 @@ function MyBoringPage(){
       sections.map( (section, i) => {
 
         const d = i - active;
+        const activeH = heights[active] || DEFAULT_ACTIVE_H();
 
         return (
-          <div key={i} className={"wheel-segment" + (d === 0 ? " active" : "")} style={{ top: rowTop(d), height: d === 0 ? "52vh" : "12vh" }}>
-            {section}
+          <div key={i} className={"wheel-segment" + (d === 0 ? " active" : "")} style={{ top: rowTop(d, activeH), height: d === 0 ? `calc(${activeH}px + 2px)` : "12vh" }}>
+            <div ref={(el) => { measureRefs.current[i] = el; }}>{section}</div>
           </div>
         );
       })
     }
-
-    { active < 2 ? <div className="wheel-segment ghost" style={{ top: "0", height: "12vh" }} /> : null }
-    { active === 0 ? <div className="wheel-segment ghost" style={{ top: "12vh", height: "12vh" }} /> : null }
-
-    { active >= section_count - 1 ? <div className="wheel-segment ghost" style={{ top: "76vh", height: "12vh" }} /> : null }
-    { active >= section_count - 2 ? <div className="wheel-segment ghost" style={{ top: "88vh", height: "12vh" }} /> : null }
 
     </div>
   );

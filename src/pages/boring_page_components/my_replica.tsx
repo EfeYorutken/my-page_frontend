@@ -237,6 +237,8 @@ const MyReplica = ( param : {lang : LanguageOptions, importants : string[]} )=>{
 
     <SectionHeader title={title} />
 
+    <div className="replica-body">
+
     <div className="comic-me">
     <img src={comic_location}/>
     </div>
@@ -283,6 +285,8 @@ const MyReplica = ( param : {lang : LanguageOptions, importants : string[]} )=>{
     </div>
 
     <textarea id="textarea" placeholder={textarea_placeholder} /> <button onClick={ask}>{submit_text}</button>
+
+    </div>
 
     </div>
 

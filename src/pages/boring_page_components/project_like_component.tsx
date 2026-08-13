@@ -18,7 +18,7 @@ const ProjectLike = (param : {title : string, elements : Project[], importants :
   return (
     <div className="project-wrapper">
     <SectionHeader title={param.title}/>
-    
+
     <button onClick={ ()=>{instanceRef.current?.prev()} }className="prev_button">&larr;</button>
 
     <div className="slider-wrapper">

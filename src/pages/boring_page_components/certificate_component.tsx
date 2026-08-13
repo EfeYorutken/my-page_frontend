@@ -1,12 +1,12 @@
 import type { Certificate } from "./../../types";
 import HighlightComponent from "./highlihgting_component";
 
-const CertificateComponent = (param : {certificate : Certificate, importants : string[]})=>{
+const CertificateComponent = (param : {certificate : Certificate, importants : string[], minHeight? : number})=>{
 
   const certificate = param.certificate;
 
   return (
-    <div className="certificate">
+    <div className="certificate" style={{ minHeight: param.minHeight }}>
 
     <div className="certificate-body">
 
