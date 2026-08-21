@@ -4,9 +4,9 @@
     "title" : "Şu Anki Projelerim",
     "data" : [
       {
-        "title" : "Bilfiil bu site",
-        "techstack" : [ "ReactJS", "Typescript" ],
-        "description" : "Portfolyo sitem",
+        "title" : "Lokal iş başvurusu filtreleme uygulaması",
+        "techstack" : [ "ReactJS", "NodeJS", "ExpressJS","Typescript" ],
+        "description" : "Kullanıcı tarafından belirlenen özelliklerce uygun bulunan iş başvurularını kullanıcı tercihlerine göre filtreleyen lokal bir web uygulaması.",
         "link" : null
       }
     ]
@@ -15,9 +15,9 @@
     "title" : "What Am I Working On",
     "data" : [
       {
-        "title" : "Literally This Site",
-        "techstack" : [ "ReactJS", "Typescript" ],
-        "description" : "My portfolio page",
+        "title" : "Local job filteration system based on skillset",
+        "techstack" : [ "ReactJS", "NodeJS", "ExpressJS","Typescript" ],
+        "description" : "A locally run web application that filters job postings found suitable based on user-defined criteria, according to the user's preferences.",
         "link" : null
       }
     ]

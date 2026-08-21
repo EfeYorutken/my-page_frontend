@@ -36,7 +36,6 @@
           "title" : "Markov Chain AI",
           "techstack" : [ "Python" ],
           "description" : "Sıradaki kelimeyi tahmin etmek için Markov Zincir'lerini kullanan bir yazı üretim aracı.",
-          "description" : "A text generation tool that utilzes Markov Chains for next-word prediction.",
           "link" : "https://github.com/EfeYorutken/markov_chain_ai"
         },
 
@@ -50,17 +49,22 @@
         {
           "title" : "Shell",
           "techstack" : [ "C" ],
-          "description" : "A shell for executing binary files and issuing system calls.",
           "description" : "Binary dosyaları ve sistem çağrılarını çaliştırabilen bir shell.",
           "link" : "https://github.com/EfeYorutken/shell"
         },
 
         {
           "title" : "Sicot",
-          "techstack" : [ "Rust" ],
+          "techstack" : [ "C++20" ],
           "description" : "Bir \"Basit Sıkıştırma Araci\" (SImple COmpression Tool). Huffman Coding metodunu kullanarak girdi dosyalarını sıkıştırılmış binary dosyalarına çevirir.",
-          "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
           "link" : "https://github.com/EfeYorutken/sicot"
+        },
+
+        {
+          "title" : "Bilfiil bu site",
+          "techstack" : [ "ReactJS", "Typescript" ],
+          "description" : "Portfolyo sitem",
+          "link" : null
         }
 
     ]
@@ -120,9 +124,16 @@
 
       {
         "title" : "Sicot",
-        "techstack" : [ "Rust" ],
+        "techstack" : [ "C++20" ],
         "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
         "link" : "https://github.com/EfeYorutken/sicot"
+      },
+
+      {
+        "title" : "Literally This Site",
+        "techstack" : [ "ReactJS", "Typescript" ],
+        "description" : "My portfolio page",
+        "link" : null
       }
 
     ]

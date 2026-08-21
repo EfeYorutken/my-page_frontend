@@ -5,13 +5,6 @@
     "data" : [
 
       {
-        "title" : "Lokal iş başvurusu filtreleme uygulaması",
-        "techstack" : [ "ReactJS", "NodeJS", "ExpressJS","Typescript" ],
-        "description" : "LinkedIn'de bulunan iş başvurularını kullanıcı tercihlerine göre filtreleyen lokal bir web uygulaması.",
-        "link" : null
-      },
-
-      {
         "title" : "JSON Parser",
         "techstack" : [ "C++" ],
         "description" : "JSON dosyası içerikleriyle C++20 objeleri oluşturmaya, kullanmaya ve kaydetmeye yarayan bir kütüphane.",
@@ -30,28 +23,13 @@
         "techstack" : [ "Rust (muhtemelen)" ],
         "description" : "Birbiriyle etkileşime geçmeyen sorguları entegre GPU üzerinden yürüten bir veritabanı çözümü.",
         "link" : null
-      },
-
-        {
-          "title" : "Sicot",
-          "techstack" : [ "Rust" ],
-          "description" : "Bir \"Basit Sıkıştırma Araci\" (SImple COmpression Tool). Huffman Coding metodunu kullanarak girdi dosyalarını sıkıştırılmış binary dosyalarına çevirir.",
-          "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
-          "link" : "https://github.com/EfeYorutken/sicot"
-        }]
+      }]
   },
 
 
   "en" : {
     "title" : "What Will I Work On",
     "data" : [
-
-      {
-        "title" : "Local job filteration system based on skillset",
-        "techstack" : [ "ReactJS", "NodeJS", "ExpressJS","Typescript" ],
-        "description" : "A locally ran webapplication that scans LinkedIn job posts for the users skillset, interest, locations etc.",
-        "link" : null
-      },
 
       {
         "title" : "JSON Parser",
@@ -72,13 +50,6 @@
         "techstack" : [ "Rust (probably)" ],
         "description" : "A database solution that executes non-interracting queries in parallel using the integrated GPU.",
         "link" : null
-      },
-
-      {
-        "title" : "Sicot",
-        "techstack" : [ "Rust" ],
-        "description" : "A SImple COmpression Tool. Uses Huffman Coding to compress and decompress files into binary files.",
-        "link" : "https://github.com/EfeYorutken/sicot"
       }
 
     ]
